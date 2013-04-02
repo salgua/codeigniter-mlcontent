@@ -56,7 +56,7 @@ An example, assuming that the field 'ml-name' is in the '$product' hash:
           //it will produce "auto"
           $this->session->set_userdata('mlang', 'it');
           echo mlang($product['ml-name']);
-          //it will produce "auto" taking default languafe from session
+          //it will produce "auto" taking default language from session
     ?>
     
 
