@@ -10,7 +10,7 @@
 
 class ML_Controller extends CI_Controller
 {
-	var $inputdata = array();
+	protected $inputdata = array();
 	function __construct()
 	{
 		parent::__construct();
@@ -20,6 +20,9 @@ class ML_Controller extends CI_Controller
 		$this->_parse_post_data();
 	}
 	
+	/**
+	 * Parse POST data transforming multilingual array in JSON string
+	 */
 	private function _parse_post_data() {
 		$form_field_prefix = $this->config->item('mlcontent-form-field-prefix');
 		$form_field_prefix_length = strlen($form_field_prefix);

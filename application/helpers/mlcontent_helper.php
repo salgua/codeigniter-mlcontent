@@ -8,6 +8,12 @@
 *
 */
 
+/**
+ * Transform multilingual JSON in a string
+ * @param string $mlangJsonString JSON string to be parsed
+ * @param srting $lang optional language string
+ */
+
 function mlang($mlangJsonString, $lang = FALSE) {
 	$CI =& get_instance();
 	if($lang === FALSE)
