@@ -44,7 +44,7 @@ mlcontent works using JSON in multilingual fields, instead of plain text. You ca
     
 5. in your model you can save ml-fields in tables as usually. If possible, for simplicity, use the same name used in the form fields for your table fields, but it's not mandatory.
 
-### display data
+### display data:
 
 in your view you must use the `mlang()` helper function to parse ml-fields. The default language is 'en', but you can pass 
 the language as second attribute. Alternatively you can use the session variable 'mlang' to use a different language. 
