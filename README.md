@@ -28,21 +28,21 @@ You need to autoload the session library
 
 ###save data:
 
-mlcontent works using JSON in multilingual fields, instead of plain text. You can start following these steps:
+mlcontent works using JSON in multilingual fields, instead of plain text. You can start by following these steps:
 
 1. edit `/application/config/mlcontent.php` and define the default language (default is "en") and the multilingual form fields prefix (default is "ml-")
 2. extend your controller using `ML_Controller` (i.e. `class Products extends ML_Controller`)
-3. in the view forms, to insert or updare records, remember to use the "ml-" prefix for fields that are multilingual. Multilingual fields must be like these:
+3. in the view forms, to insert or update records, remember to use the "ml-" prefix for fields that are multilingual. Multilingual fields must be like these:
 
     `<input name="ml-name['en']" value="car" />`
     
     `<input name="ml-name['it']" value="auto" />`
     
-4. your controller will put automatically all POST data in `$this->inputdata`, transforming multilingual fields into JSON strings. Sending the previous form the content of `$this->inputdata` will be
+4. your controller will automatically put all POST data in `$this->inputdata`, transforming multilingual fields into JSON strings. Sending the previous form the content of `$this->inputdata` will be
 
     `[ml-name] => {"_mlc":{"en":"car","it":"auto"}}`
     
-5. in your model you can save ml-fields in tables as usually. If possible, for simplicity, use the same name used in the form fields for your table fields, but it's not mandatory.
+5. in your model you can save ml-fields in tables as usual. If possible, for simplicity, use the same name used in the form fields for your table fields, but it's not mandatory.
 
 ### display data:
 
